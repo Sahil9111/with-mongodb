@@ -59,7 +59,7 @@ export default function Home({
         )}
 
         <p className="description">
-        “Welcome to our movie website, where we bring you the best of the best in film. Our carefully curated selection of top-rated movies is sure to satisfy even the most discerning cinephile. From timeless classics to the latest blockbusters, we’ve got you covered. Sit back, relax, and let us guide you through the world of cinema.” <code>pages/index.js</code>
+        “Welcome to our movie website, where we bring you the best of the best in film. Our carefully curated selection of top-rated movies is sure to satisfy even the most discerning cinephile. From timeless classics to the latest blockbusters, we’ve got you covered. Sit back, relax, and let us guide you through the world of cinema.”
         </p>
 
         <div >
