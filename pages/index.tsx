@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import clientPromise from '../lib/mongodb'
 import type { InferGetServerSidePropsType, GetServerSideProps } from 'next'
+import 'bootstrap/dist/css/bootstrap.css';
+
 
 type ConnectionStatus = {
   isConnected: boolean
@@ -22,6 +24,7 @@ export const getServerSideProps: GetServerSideProps<
 
     return {
       props: { isConnected: true },
+      
     }
   } catch (e) {
     console.error(e)
@@ -43,52 +46,33 @@ export default function Home({
 
       <main>
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js with MongoDB!</a>
+        Discover the <a href="./movies">Best Films</a>
         </h1>
 
         {isConnected ? (
-          <h2 className="subtitle">You are connected to MongoDB</h2>
+          <h2 className="subtitle" style={{margin: "5rem"}}>“Unforgettable Films, Handpicked for You”</h2>
         ) : (
-          <h2 className="subtitle">
-            You are NOT connected to MongoDB. Check the <code>README.md</code>{' '}
+          <h2 className="subtitle" style={{margin: "5rem"}}>
+            “Unforgettable Films, Handpicked for You”<code>README.md</code>{' '}
             for instructions.
           </h2>
         )}
 
         <p className="description">
-          Get started by editing <code>pages/index.js</code>
+        “Welcome to our movie website, where we bring you the best of the best in film. Our carefully curated selection of top-rated movies is sure to satisfy even the most discerning cinephile. From timeless classics to the latest blockbusters, we’ve got you covered. Sit back, relax, and let us guide you through the world of cinema.” <code>pages/index.js</code>
         </p>
 
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
+        <div >
+        {/* className="grid" */}
+          <a href="./movies" className="card">
+            <h3 style={{display: "flex", justifyContent: "center"}}>Top Rated Movies</h3>
+            {/* <p>Find in-depth information about Next.js features and API.</p> */}
           </a>
 
-          <a href="https://nextjs.org/learn" className="card">
+          {/* <a href="https://nextjs.org/learn" className="card">
             <h3>Learn &rarr;</h3>
             <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+          </a>        */}
         </div>
       </main>
 
